@@ -1,0 +1,26 @@
+:root {
+    /* Colors palette */
+    --global-background: white;
+    --add-color: #00b37e;
+    --remove-color: #ce4a4a;
+    --light-txt: whitesmoke;
+    --dark-txt: #29292e;
+    --elevation-components: whitesmoke;
+
+    /* Spacing */
+    --sm-space: .5rem;
+    --md-space: 1rem;
+    --lg-space: 1.5rem;
+    --xl-space: 2rem;
+
+
+    /* Font size */
+    --sm-font: 1.4rem;
+    --md-font: 1.6rem;
+    --lg-font: 2rem;
+    --xl-font: 2.5rem;
+
+
+    /* Effects */
+    --default-transition: all ease .5s;
+}
