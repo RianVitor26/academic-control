@@ -1,6 +1,6 @@
 :root {
     /* Colors palette */
-    --global-background: white;
+    --global-background: rgb(255, 255, 255);
     --add-color: #00b37e;
     --remove-color: #ce4a4a;
     --light-txt: whitesmoke;
