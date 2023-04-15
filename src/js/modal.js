@@ -3,8 +3,6 @@ export const modals = document.querySelectorAll('.modal')
 const cancelButtons = document.querySelectorAll('.cancel-btn')
 
 
-// OPEN OR CLOSE MODAL
-
 export function toggleModal() {
     Array.from(registerButtons).forEach(button => {
         button.addEventListener('click', () => {

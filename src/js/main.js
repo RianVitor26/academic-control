@@ -1,24 +1,16 @@
-import { toggleMenu } from "./menu.js";
-import { toggleModal, cancelModal, removeModal } from "./modal.js";
-import { createNewLineOnTable } from "./createNewLineOnTable.js";
+import { toggleMenu } from "./menu.js"
+import { toggleModal, cancelModal, removeModal } from "./modal.js"
+import { createNewLineOnTable } from "./createNewLineOnTable.js"
+import { fillTablesFromLocalStorage } from "./fillTablesFromLocalStorage.js"
 
 const createNewDataInputs = document.querySelectorAll('.create-new-data-input')
-const forms = document.querySelectorAll('form')
+export const forms = document.querySelectorAll('form')
 
 toggleMenu()
 toggleModal()
 cancelModal()
 
-export function saveOnLocalStorage(key, value) {
-    let entities = JSON.parse(localStorage.getItem(key))
-    if (entities === null) {
-        entities = []
-    } else if (!Array.isArray(entities)) {
-        entities = [entities]
-    }
-    entities.push(value)
-    localStorage.setItem(key, JSON.stringify(entities))
-}
+window.addEventListener('load', () => fillTablesFromLocalStorage())
 
 
 Array.from(forms).forEach(form => {

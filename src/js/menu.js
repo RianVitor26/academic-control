@@ -2,8 +2,6 @@ import { removeModal } from "./modal.js"
 const buttons = document.querySelectorAll('.btn')
 const panels = document.querySelectorAll('.panel')
 
-//RENDER A UNIQUE MENU
-
 export function toggleMenu() {
     buttons.forEach(btn => btn.addEventListener("click", () => renderOnePanel(event.target)))
 }

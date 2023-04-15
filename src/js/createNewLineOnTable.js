@@ -1,4 +1,4 @@
-import { saveOnLocalStorage } from './main.js'
+import { saveOnLocalStorage } from './saveOnLocalStorage.js'
 
 export function createNewLineOnTable(tableID, inputValue) {
     const cell1 = document.createElement('td')

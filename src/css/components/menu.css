@@ -70,10 +70,45 @@
     background: var(--menu-active);
 }
 
+.btn[data-js="menu3"].active {
+    background: var(--menu-active);
+}
+
+.btn[data-js="menu4"].active {
+    background: var(--menu-active);
+}
+
+.btn[data-js="menu5"].active {
+    background: var(--menu-active);
+}
+
+.btn[data-js="menu6"].active {
+    background: var(--menu-active);
+}
+
+
+
+
 .panel[data-js="menu1"] {
     background-color: var(--menu-active);
 }
 
 .panel[data-js="menu2"] {
+    background-color: var(--menu-active);
+}
+
+.panel[data-js="menu3"] {
+    background-color: var(--menu-active);
+}
+
+.panel[data-js="menu4"] {
+    background-color: var(--menu-active);
+}
+
+.panel[data-js="menu5"] {
+    background-color: var(--menu-active);
+}
+
+.panel[data-js="menu6"] {
     background-color: var(--menu-active);
 }
