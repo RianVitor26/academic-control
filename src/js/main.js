@@ -1,3 +1,7 @@
-import { sayHello } from "./utils.js"
+import { toggleMenu } from "./menu.js";
+import { toggleModal, cancelModal } from "./modal.js";
 
-window.onload = sayHello(document.body)
+
+toggleMenu()
+toggleModal()
+cancelModal()

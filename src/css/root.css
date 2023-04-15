@@ -1,11 +1,12 @@
 :root {
     /* Colors palette */
-    --global-background: white;
+    --global-background: #22272e;
+    --disabled-color: #22272e;
     --add-color: #00b37e;
-    --remove-color: #ce4a4a;
-    --light-txt: whitesmoke;
+    --warning-color: #ce4a4a;
+    --light-txt: rgb(228, 228, 228);
     --dark-txt: #29292e;
-    --elevation-components: whitesmoke;
+    --menu-active: #2c3138;
 
     /* Spacing */
     --sm-space: .5rem;

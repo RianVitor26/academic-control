@@ -8,7 +8,20 @@ body{
     background: var(--global-background);
 }
 
-h1{
-    text-align: center;
-    font-size: var(--md-font);
+main{
+    margin: 0 auto;
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
+
+button{
+    font-weight: bold;
+    border: none;
+}
+
+button:hover {
+     cursor: pointer;
+ }

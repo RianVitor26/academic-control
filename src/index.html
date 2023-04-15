@@ -11,11 +11,72 @@
     <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/baseTags.css">
     <link rel="stylesheet" href="css/components/table.css">
+    <link rel="stylesheet" href="css/components/menu.css">
+    <link rel="stylesheet" href="css/components/modal.css">
     <link rel="stylesheet" href="css/responsiveness.css">
     <title>Controle de ensalamento de professores</title>
     <script type="module" defer src="js/main.js"></script>
 </head>
 <body>
-    
+    <main class="wrapper">
+        
+        <!-- MENU BUTTONS -->
+        <div class="btn-wrapper">
+            <button class="btn active" data-js="menu1">Cadastrar Professores</button>
+            <button class="btn" data-js="menu2">Cadastrar Matérias</button>
+        </div>
+
+
+        <!-- PANELS -->
+        <div class="panel-wrapper">
+            <div class="panel active" data-js="menu1" id="Professores">
+                <!-- TEACHER TABLE -->
+                <table>
+                    <tr>
+                        <th>Professores</th>
+                    </tr>
+                    <tr>
+                        <th>Nome</th>
+                    </tr>
+                </table>
+                <button class="register-btn">Registrar Professores</button>
+
+                <!-- MODAL -->
+                <div class="modal">
+                    <label>Nome do(a) Professor(a)</label>
+                    <input required type="text" minlength="2" maxlength="30" placeholder="Insira um(a) professor(a)">
+                    <button class="create-btn">Criar</button>
+                    <button class="cancel-btn">Cancelar</button>
+                </div>
+            </div>
+
+
+            <!-- SUBJECT TABLE -->
+            <div class="panel" data-js="menu2">
+                <table>
+                    <tr>
+                        <th>Matérias</th>
+                    </tr>
+                    <tr>
+                        <th>Nome</th>
+                    </tr>
+                </table>
+                <button class="register-btn">Registrar Matérias</button>
+                
+                <!-- MODAL -->
+                <div class="modal">
+                    <label>Nome da Matéria</label>
+                    <input required type="text" minlength="2" maxlength="30" placeholder="Insira uma matéria">
+                    <button class="create-btn">Criar</button>
+                    <button class="cancel-btn">Cancelar</button>
+                </div>
+            </div>
+        </div>
+        </main>
+
+        
+        <footer>
+            
+        </footer>
 </body>
 </html>
