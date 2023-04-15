@@ -38,6 +38,6 @@ export function createNewLineOnTable(tableID, inputValue) {
         else {
             cellToEdit.innerHTML = cellToEdit.innerHTML
         }
-       
+
     })
-    }
+}

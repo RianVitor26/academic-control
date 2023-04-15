@@ -15,11 +15,6 @@ tr:nth-child(even){
     border:none;
 }
 
-.fa-pen,
-.fa-trash {
-    cursor: pointer;
-}
-
 .fa-pen{
     color: var(--add-color);
 }

@@ -1,0 +1,52 @@
+:root {
+    --global-background: #22272e;
+    --disabled-color: #22272e;
+    --add-color: #00b37e;
+    --warning-color: #ce4a4a;
+    --light-txt: rgb(228, 228, 228);
+    --dark-txt: #29292e;
+    --menu-active: #2c3138;
+    --default-transition: all ease .5s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--light-txt);
+}
+
+
+html, body{
+    font-size: 62.5%;
+    width: 100%;
+    height: 100vh;
+}
+
+body{
+    background: var(--global-background);
+}
+
+main{
+    margin: 0 auto;
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+button{
+    font-weight: bold;
+    border: none;
+    border-radius: .5rem;
+}
+
+button:hover {
+     cursor: pointer;
+ }
+
+ i{
+    cursor: pointer;
+ }
