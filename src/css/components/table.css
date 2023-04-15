@@ -1,13 +1,28 @@
-/* TABLES */
-
 table {
+    border-collapse: collapse;
     width: 30rem;
-    height: 20rem;
+    font-size: 1.6rem;
 }
 
 th,
-td {
+td { 
+    text-align: center;
     padding: 1rem;
-    font-size: 1.6rem;
-    border: .1rem solid gray;
+    border: .3rem solid var(--global-background);
+}
+
+tr:nth-child(even){
+    border:none;
+}
+
+.fa-pen,
+.fa-trash {
+    cursor: pointer;
+}
+
+.fa-pen{
+    color: var(--add-color);
+}
+.fa-trash{
+    color: var(--warning-color);
 }

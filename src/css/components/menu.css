@@ -58,6 +58,7 @@
 
 .register-btn:hover {
     background: var(--add-color);
+    color: var(--dark-txt);
 }
 
 /* PANELS AND BUTTONS ACTIVE COLORS */
