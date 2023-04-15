@@ -1,7 +1,6 @@
 export function createNewLineOnTable(tableID, inputValue) {
     const cell1 = document.createElement('td')
     cell1.innerHTML = inputValue
-
     const cell2 = document.createElement('td')
     const editIcon = document.createElement('i')
     editIcon.className = 'fa-solid fa-pen'

@@ -19,7 +19,7 @@ Array.from(forms).forEach(form => {
         const tableID = form.dataset.table
         console.log(tableID)
         Array.from(createNewDataInputs).forEach(input => {
-            if (input.value.length > 0) {
+            if (input.value.trim().length > 0) {
                 const value = input.value
                 createNewLineOnTable(tableID, value)
                 input.value = '' 
