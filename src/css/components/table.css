@@ -2,6 +2,7 @@ table {
     border-collapse: collapse;
     width: 30rem;
     font-size: 1.6rem;
+    margin: 0 auto;
 }
 
 th,

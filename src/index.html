@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,13 +12,23 @@
     <link rel="stylesheet" href="css/components/table.css">
     <link rel="stylesheet" href="css/components/menu.css">
     <link rel="stylesheet" href="css/components/modal.css">
+    <link rel="stylesheet" href="css/responsiviness.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css'>
     <title>Controle de ensalamento de professores</title>
     <script type="module" defer src="js/main.js"></script>
 </head>
+
 <body>
+    <i class="fa-solid fa-bars menu-mobile-btn"></i>
+
     <main class="wrapper">
-        
+       
+        <!-- MENU MOBILE -->
+        <div class="menu-mobile">
+            <button class="btn active" data-js="menu1">Cadastrar Professores</button>
+            <button class="btn" data-js="menu2">Cadastrar Matérias</button>
+        </div>
+
         <!-- MENU BUTTONS -->
         <div class="btn-wrapper">
             <button class="btn active" data-js="menu1">Cadastrar Professores</button>
@@ -41,7 +52,8 @@
                 <!-- MODAL -->
                 <form data-table="professores" class="modal">
                     <label>Nome do(a) Professor(a)</label>
-                    <input class="create-new-data-input" required type="text" minlength="2" maxlength="30" placeholder="Insira um(a) professor(a)">
+                    <input class="create-new-data-input" required type="text" minlength="2" maxlength="30"
+                        placeholder="Insira um(a) professor(a)">
                     <button class="create-btn">Criar</button>
                     <button class="cancel-btn">Cancelar</button>
                 </form>
@@ -56,21 +68,20 @@
                         <th>Editar</th>
                         <th>Remover</th>
                     </tr>
-                    <tr>
-                        
-                    </tr>
                 </table>
                 <button class="register-btn">Registrar Matérias</button>
-                
+
                 <!-- MODAL -->
                 <form data-table="materias" class="modal">
                     <label>Nome da Matéria</label>
-                    <input class="create-new-data-input" required type="text" minlength="2" maxlength="30" placeholder="Insira uma matéria">
+                    <input class="create-new-data-input" required type="text" minlength="2" maxlength="30"
+                        placeholder="Insira uma matéria">
                     <button class="create-btn">Criar</button>
                     <button class="cancel-btn">Cancelar</button>
                 </form>
             </div>
         </div>
-        </main>
+    </main>
 </body>
+
 </html>

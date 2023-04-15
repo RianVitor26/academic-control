@@ -9,7 +9,7 @@
     --default-transition: all ease .5s;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,35 +18,108 @@
 }
 
 
-html, body{
+html,
+body {
     font-size: 62.5%;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
 }
 
-body{
+body {
     background: var(--global-background);
 }
 
-main{
-    margin: 0 auto;
-    width: 80%;
-    height: 90vh;
+main {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    height: 100%;
     position: relative;
+    filter: drop-shadow(0 0 1rem rgb(30, 35, 41));
 }
 
-button{
+button {
     font-weight: bold;
     border: none;
     border-radius: .5rem;
 }
 
 button:hover {
-     cursor: pointer;
- }
-
- i{
     cursor: pointer;
- }
+}
+
+i {
+    cursor: pointer;
+}
+
+.menu-mobile-btn {
+    visibility: hidden;
+    font-size: 3rem;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    z-index: 900;
+}
+
+.menu-mobile{
+    display: none;
+}
+
+.menu-mobile.open{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 800;
+    background: var(--global-background);
+}
+.menu-mobile.open button{
+   width: 100%;
+   padding: 3rem;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--menu-active);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--global-background);
+    border-radius: .5rem;
+}
+
+::-moz-scrollbar {
+    width: 1rem;
+}
+
+::-moz-scrollbar-track {
+    background-color: var(--menu-active);
+}
+
+::-moz-scrollbar-thumb {
+    background: var(--global-background);
+    border-radius: .5rem;
+}
+
+::-ms-scrollbar {
+    width: 1rem;
+}
+
+::-ms-scrollbar-track {
+    background-color: var(--menu-active);
+}
+
+::-ms-scrollbar-thumb {
+    background: var(--global-background);
+    border-radius: .5rem;
+}

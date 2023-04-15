@@ -1,8 +1,10 @@
-/* MENU */
-
 .btn-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .btn {
@@ -17,30 +19,25 @@
 }
 
 .panel-wrapper {
-    padding: 1rem;
+    padding: 3rem;
     width: 100%;
-    height: 80vh;
+    height: 100%;
 }
 
 .panel {
     width: 100%;
     height: 100%;
     text-align: center;
-    background-color: rgb(118, 199, 172);
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 10rem 0;
     display: none;
     overflow-y: auto;
-}
-
-.panel.active {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
 }
 
-/* REGISTER BUTTON */
+.panel.active {
+    display: block;
+}
 
 .register-btn {
     padding: 1rem;
@@ -61,7 +58,7 @@
     color: var(--dark-txt);
 }
 
-/* PANELS AND BUTTONS ACTIVE COLORS */
+
 .btn[data-js="menu1"].active {
     background: var(--menu-active);
 }
@@ -85,8 +82,6 @@
 .btn[data-js="menu6"].active {
     background: var(--menu-active);
 }
-
-
 
 
 .panel[data-js="menu1"] {

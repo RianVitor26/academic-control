@@ -1,0 +1,19 @@
+@media only screen and (max-width: 769px) {
+    .wrapper .btn-wrapper {
+        display: none;
+    }
+
+    .menu-mobile-btn{
+        visibility: visible;
+    }
+     .panel-wrapper {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .modal {
+        width: 30rem;
+        height: 30rem;
+    }
+}

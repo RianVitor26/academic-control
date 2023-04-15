@@ -1,9 +1,13 @@
 import { removeModal } from "./modal.js"
 const buttons = document.querySelectorAll('.btn')
 const panels = document.querySelectorAll('.panel')
+const menuMobileBtn = document.querySelector('.menu-mobile-btn')
+const menuMobile = document.querySelector('.menu-mobile')
+
+
 
 export function toggleMenu() {
-    buttons.forEach(btn => btn.addEventListener("click", () => renderOnePanel(event.target)))
+    buttons.forEach(btn => btn.addEventListener("click", (event) => renderOnePanel(event.target)))
 }
 
 function renderOnePanel(btn) {
@@ -18,3 +22,11 @@ function removePanel() {
     panels.forEach(panel => panel.classList.remove('active'))
 }
 
+export function openMenuMobile() {
+    menuMobileBtn.addEventListener('click', () => {
+        menuMobile.classList.toggle('open')
+        menuMobile.childNodes.forEach(button => button.addEventListener('click', () => {
+            menuMobile.classList.remove('open')
+        }))
+    })
+}
