@@ -8,7 +8,7 @@ th,
 td { 
     text-align: center;
     padding: 1rem;
-    border: .3rem solid var(--global-background);
+    border: .2rem solid var(--global-background);
 }
 
 tr:nth-child(even){

@@ -1,3 +1,5 @@
+import { saveOnLocalStorage } from './main.js'
+
 export function createNewLineOnTable(tableID, inputValue) {
     const cell1 = document.createElement('td')
     cell1.innerHTML = inputValue
@@ -19,6 +21,8 @@ export function createNewLineOnTable(tableID, inputValue) {
 
     const table = document.getElementById(tableID)
     table.appendChild(newLine)
+
+    saveOnLocalStorage(tableID, inputValue)
 
     removeIcon.addEventListener('click', () => {
         //<i> --> <td> --> <tr>.remove()
