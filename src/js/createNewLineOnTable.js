@@ -30,6 +30,14 @@ export function createNewLineOnTable(tableID, inputValue) {
     editIcon.addEventListener('click', () => {
         //<i> --> <td> --> <tr>.edit()
         const row = editIcon.parentNode.parentNode;
-        row.edit()
+        const cellToEdit = row.cells[0]
+        const newValue = prompt('Por favor, digite o novo valor: ')
+        if (newValue) {
+            cellToEdit.innerHTML = newValue
+        }
+        else {
+            cellToEdit.innerHTML = cellToEdit.innerHTML
+        }
+       
     })
     }
