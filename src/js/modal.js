@@ -1,4 +1,4 @@
-const registerButtons = document.querySelectorAll('.register-btn')
+export const registerButtons = document.querySelectorAll('.register-btn')
 export const modals = document.querySelectorAll('.modal')
 const cancelButtons = document.querySelectorAll('.cancel-btn')
 
@@ -23,7 +23,7 @@ export function removeModal() {
 }
 
 export function cancelModal() {
-    [...cancelButtons].forEach(cancelButton => {
+    Array.from(cancelButtons).forEach(cancelButton => {
         cancelButton.addEventListener('click', () => {
             Array.from(modals).forEach(modal => {
                 modal.classList.remove('open')
