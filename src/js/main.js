@@ -1,4 +1,4 @@
-import { toggleMenu } from "./menu.js"
+import { toggleMenu, openMenuMobile } from "./menu.js"
 import { toggleModal, cancelModal, removeModal } from "./modal.js"
 import { createNewLineOnTable } from "./createNewLineOnTable.js"
 import { fillTablesFromLocalStorage } from "./fillTablesFromLocalStorage.js"
@@ -7,6 +7,7 @@ const createNewDataInputs = document.querySelectorAll('.create-new-data-input')
 export const forms = document.querySelectorAll('form')
 
 toggleMenu()
+openMenuMobile()
 toggleModal()
 cancelModal()
 
