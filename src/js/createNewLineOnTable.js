@@ -26,6 +26,10 @@ export function createNewLineOnTable(tableID, inputValue) {
         //<i> --> <td> --> <tr>.remove()
         const row = removeIcon.parentNode.parentNode;
         row.remove()
+        let entityList = JSON.parse(localStorage.getItem(tableID))
+        const elementIndex = entityList.indexOf(inputValue)
+        entityList.splice(elementIndex, 1)
+        localStorage.setItem(tableID, JSON.stringify(entityList))
     })
 
     editIcon.addEventListener('click', () => {
@@ -35,6 +39,10 @@ export function createNewLineOnTable(tableID, inputValue) {
         const newValue = prompt('Por favor, digite o novo valor: ')
         if (newValue) {
             cellToEdit.innerHTML = newValue
+            let entityList = JSON.parse(localStorage.getItem(tableID))
+            const elementIndex = entityList.indexOf(inputValue)
+            entityList.splice(elementIndex, 1, newValue)
+            localStorage.setItem(tableID, JSON.stringify(entityList))
         }
         else {
             cellToEdit.innerHTML = cellToEdit.innerHTML
