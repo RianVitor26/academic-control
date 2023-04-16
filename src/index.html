@@ -20,26 +20,29 @@
 
 <body>
     <i class="fa-solid fa-bars menu-mobile-btn"></i>
-
     <main class="wrapper">
-       
-        <!-- MENU MOBILE -->
         <div class="menu-mobile">
             <button class="btn active" data-js="menu1">Cadastrar Professores</button>
-            <button class="btn" data-js="menu2">Cadastrar Matérias</button>
+            <button class="btn" data-js="menu2">Cadastrar Cursos</button>
+            <button class="btn" data-js="menu3">Cadastrar Salas</button>
+            <button class="btn" data-js="menu4">Cadastrar Período</button>
+            <button class="btn" data-js="menu5">Novo Desafio</button>
+            <button class="btn" data-js="menu6">Novo horário</button>
         </div>
 
-        <!-- MENU BUTTONS -->
         <div class="btn-wrapper">
             <button class="btn active" data-js="menu1">Cadastrar Professores</button>
-            <button class="btn" data-js="menu2">Cadastrar Matérias</button>
+            <button class="btn" data-js="menu2">Cadastrar Cursos</button>
+            <button class="btn" data-js="menu3">Cadastrar Salas</button>
+            <button class="btn" data-js="menu4">Cadastrar Período</button>
+            <button class="btn" data-js="menu5">Novo Desafio</button>
+            <button class="btn" data-js="menu6">Novo horário</button>
         </div>
 
 
-        <!-- PANELS -->
+
         <div class="panel-wrapper">
             <div class="panel active" data-js="menu1">
-                <!-- TEACHER TABLE -->
                 <table id="professores">
                     <tr>
                         <th>Professores</th>
@@ -49,7 +52,6 @@
                 </table>
                 <button class="register-btn">Registrar Professores</button>
 
-                <!-- MODAL -->
                 <form data-table="professores" class="modal">
                     <label>Nome do(a) Professor(a)</label>
                     <input class="create-new-data-input" required type="text" minlength="2" maxlength="30"
@@ -60,22 +62,104 @@
             </div>
 
 
-            <!-- SUBJECT TABLE -->
+
+
             <div class="panel" data-js="menu2">
-                <table id="materias">
+                <table id="cursos">
                     <tr>
-                        <th>Matérias</th>
+                        <th>Cursos</th>
+                        <th>Editar</th>
+                        <th>Remover</th>
+                    </tr>
+                </table>s
+                <button class="register-btn">Registrar Cursos</button>
+
+
+                <form data-table="cursos" class="modal">
+                    <label>Nome do Curso</label>
+                    <input class="create-new-data-input" required type="text" minlength="2" maxlength="30"
+                        placeholder="Insira um novo curso">
+                    <button class="create-btn">Criar</button>
+                    <button class="cancel-btn">Cancelar</button>
+                </form>
+            </div>
+
+            <div class="panel" data-js="menu3">
+                <table id="salas">
+                    <tr>
+                        <th>Salas</th>
                         <th>Editar</th>
                         <th>Remover</th>
                     </tr>
                 </table>
-                <button class="register-btn">Registrar Matérias</button>
+                <button class="register-btn">Registrar Salas</button>
 
-                <!-- MODAL -->
-                <form data-table="materias" class="modal">
-                    <label>Nome da Matéria</label>
+                <form data-table="salas" class="modal">
+                    <label>Número da Sala</label>
+                    <input class="create-new-data-input" required type="number" minlength="2" maxlength="30"
+                        placeholder="Insira uma sala">
+                    <button class="create-btn">Criar</button>
+                    <button class="cancel-btn">Cancelar</button>
+                </form>
+            </div>
+
+            <div class="panel" data-js="menu4">
+                <table id="periodos">
+                    <tr>
+                        <th>Períodos</th>
+                        <th>Editar</th>
+                        <th>Remover</th>
+                    </tr>
+                </table>
+                <button class="register-btn">Registrar Período</button>
+
+
+                <form data-table="periodos" class="modal">
+                    <label>Período</label>
+                    <input class="create-new-data-input" required type="number" minlength="2" maxlength="30"
+                        placeholder="Insira um período">
+                    <button class="create-btn">Criar</button>
+                    <button class="cancel-btn">Cancelar</button>
+                </form>
+            </div>
+
+
+
+            <div class="panel" data-js="menu5">
+                <table id="desafios">
+                    <tr>
+                        <th>Desafios</th>
+                        <th>Editar</th>
+                        <th>Remover</th>
+                    </tr>
+                </table>
+                <button class="register-btn">Novo Desafio</button>
+
+
+                <form data-table="desafios" class="modal">
+                    <label>Nome do desafio</label>
                     <input class="create-new-data-input" required type="text" minlength="2" maxlength="30"
-                        placeholder="Insira uma matéria">
+                        placeholder="Insira um período">
+                    <button class="create-btn">Criar</button>
+                    <button class="cancel-btn">Cancelar</button>
+                </form>
+            </div>
+
+            <div class="panel" data-js="menu6">
+                <table id="calendario">
+                    <tr>
+                        <th>Calendário</th>
+                        <th>Editar</th>
+                        <th>Remover</th>
+                    </tr>
+                </table>
+                <button class="register-btn">Novo Horário</button>
+
+
+                <form data-table="calendario" class="modal">
+                    <label>Definir uma data</label>
+                    <input class="create-new-data-input" required type="date" minlength="2" maxlength="30"
+                        placeholder="Insira um horário">
                     <button class="create-btn">Criar</button>
                     <button class="cancel-btn">Cancelar</button>
                 </form>
