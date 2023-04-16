@@ -2,6 +2,7 @@ import { toggleMenu, openMenuMobile } from "./menu.js"
 import { toggleModal, cancelModal, removeModal } from "./modal.js"
 import { createNewLineOnTable } from "./createNewLineOnTable.js"
 import { fillTablesFromLocalStorage } from "./fillTablesFromLocalStorage.js"
+import { saveOnLocalStorage } from './saveOnLocalStorage.js'
 
 const createNewDataInputs = document.querySelectorAll('.create-new-data-input')
 export const forms = document.querySelectorAll('form')
@@ -22,6 +23,7 @@ Array.from(forms).forEach(form => {
             if (input.value.trim().length > 0) {
                 const value = input.value
                 createNewLineOnTable(tableID, value)
+                saveOnLocalStorage(tableID, value)
                 input.value = '' 
             }
         })
