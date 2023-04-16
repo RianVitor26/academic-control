@@ -1,4 +1,0 @@
-No load da página, a função preencher a tabela é chamada
-
-
-Ao clicar no botao criar ele chama a função criar linha na tabela e a função salvar no localStorage
