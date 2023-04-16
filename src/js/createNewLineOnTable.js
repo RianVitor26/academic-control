@@ -1,4 +1,4 @@
-import { saveOnLocalStorage } from './saveOnLocalStorage.js'
+
 
 export function createNewLineOnTable(tableID, inputValue) {
     const cell1 = document.createElement('td')
@@ -21,8 +21,6 @@ export function createNewLineOnTable(tableID, inputValue) {
 
     const table = document.getElementById(tableID)
     table.appendChild(newLine)
-
-    saveOnLocalStorage(tableID, inputValue)
 
     removeIcon.addEventListener('click', () => {
         //<i> --> <td> --> <tr>.remove()
