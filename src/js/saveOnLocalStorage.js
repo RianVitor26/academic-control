@@ -1,3 +1,4 @@
+// Função pra salvar uma chave e um  valor no localStorage
 
 export function saveOnLocalStorage(key, value) {
     let entities = JSON.parse(localStorage.getItem(key))
@@ -8,5 +9,4 @@ export function saveOnLocalStorage(key, value) {
     }
     entities.push(value)
     localStorage.setItem(key, JSON.stringify(entities))
-    console.log('salvou')
 }

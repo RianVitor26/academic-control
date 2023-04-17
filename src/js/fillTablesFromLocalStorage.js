@@ -1,4 +1,4 @@
-import { forms } from './main.js'
+import { forms } from './handleSubmitForm.js'
 import { createNewLineOnTable } from './createNewLineOnTable.js'
 
 export function fillTablesFromLocalStorage() {

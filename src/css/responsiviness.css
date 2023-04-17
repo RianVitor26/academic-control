@@ -1,12 +1,12 @@
 @media only screen and (max-width: 769px) {
-    .wrapper .btn-wrapper {
+    .wrapper .menu-btn-container {
         display: none;
     }
 
     .menu-mobile-btn{
         visibility: visible;
     }
-     .panel-wrapper {
+     .panel-container {
         padding: 0;
     }
     main{

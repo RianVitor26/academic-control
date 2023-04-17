@@ -21,7 +21,7 @@
 <body>
     <i class="fa-solid fa-bars menu-mobile-btn"></i>
     <main class="wrapper">
-        <div class="menu-mobile">
+        <div class="menu-mobile-container">
             <button class="btn active" data-js="menu1">Cadastrar Professores</button>
             <button class="btn" data-js="menu2">Cadastrar Cursos</button>
             <button class="btn" data-js="menu3">Cadastrar Salas</button>
@@ -30,7 +30,7 @@
             <button class="btn" data-js="menu6">Novo horário</button>
         </div>
 
-        <div class="btn-wrapper">
+        <div class="menu-btn-container">
             <button class="btn active" data-js="menu1">Cadastrar Professores</button>
             <button class="btn" data-js="menu2">Cadastrar Cursos</button>
             <button class="btn" data-js="menu3">Cadastrar Salas</button>
@@ -39,9 +39,7 @@
             <button class="btn" data-js="menu6">Novo horário</button>
         </div>
 
-
-
-        <div class="panel-wrapper">
+        <div class="panel-container">
             <div class="panel active" data-js="menu1">
                 <table id="professores">
                     <tr>
@@ -50,16 +48,24 @@
                         <th>Remover</th>
                     </tr>
                 </table>
+
                 <button class="register-btn">Registrar Professores</button>
 
                 <form data-table="professores" class="modal">
                     <label>Nome do(a) Professor(a)</label>
-                    <input class="create-new-data-input" required type="text" minlength="2" maxlength="30"
-                        placeholder="Insira um(a) professor(a)">
+                    <input 
+                    class="input-form" 
+                    required 
+                    type="text" 
+                    minlength="2" 
+                    maxlength="30"
+                    placeholder="Insira um(a) professor(a)"
+                    >
                     <button class="create-btn">Criar</button>
                     <button class="cancel-btn">Cancelar</button>
                 </form>
             </div>
+
 
 
 
@@ -71,18 +77,28 @@
                         <th>Editar</th>
                         <th>Remover</th>
                     </tr>
-                </table>s
-                <button class="register-btn">Registrar Cursos</button>
+                </table>
 
+                <button class="register-btn">Registrar Cursos</button>
 
                 <form data-table="cursos" class="modal">
                     <label>Nome do Curso</label>
-                    <input class="create-new-data-input" required type="text" minlength="2" maxlength="30"
-                        placeholder="Insira um novo curso">
+                    <input 
+                    class="input-form" 
+                    required 
+                    type="text" 
+                    minlength="2" 
+                    maxlength="30"
+                    placeholder="Insira um novo curso"
+                    >
                     <button class="create-btn">Criar</button>
                     <button class="cancel-btn">Cancelar</button>
                 </form>
             </div>
+
+
+
+
 
             <div class="panel" data-js="menu3">
                 <table id="salas">
@@ -92,16 +108,25 @@
                         <th>Remover</th>
                     </tr>
                 </table>
+
                 <button class="register-btn">Registrar Salas</button>
 
                 <form data-table="salas" class="modal">
                     <label>Número da Sala</label>
-                    <input class="create-new-data-input" required type="number" minlength="2" maxlength="30"
-                        placeholder="Insira uma sala">
+                    <input 
+                    class="input-form" 
+                    required type="number" 
+                    min="1" 
+                    max="500"
+                    placeholder="Insira uma sala">
                     <button class="create-btn">Criar</button>
                     <button class="cancel-btn">Cancelar</button>
                 </form>
             </div>
+
+
+
+
 
             <div class="panel" data-js="menu4">
                 <table id="periodos">
@@ -111,13 +136,18 @@
                         <th>Remover</th>
                     </tr>
                 </table>
-                <button class="register-btn">Registrar Período</button>
 
+                <button class="register-btn">Registrar Período</button>
 
                 <form data-table="periodos" class="modal">
                     <label>Período</label>
-                    <input class="create-new-data-input" required type="number" minlength="2" maxlength="30"
-                        placeholder="Insira um período">
+                    <input 
+                    class="input-form" 
+                    required 
+                    type="number" 
+                    min="1" 
+                    max="10"
+                    placeholder="Insira o período">
                     <button class="create-btn">Criar</button>
                     <button class="cancel-btn">Cancelar</button>
                 </form>
@@ -133,13 +163,18 @@
                         <th>Remover</th>
                     </tr>
                 </table>
-                <button class="register-btn">Novo Desafio</button>
 
+                <button class="register-btn">Novo Desafio</button>
 
                 <form data-table="desafios" class="modal">
                     <label>Nome do desafio</label>
-                    <input class="create-new-data-input" required type="text" minlength="2" maxlength="30"
-                        placeholder="Insira um período">
+                    <input 
+                    class="input-form" 
+                    required 
+                    type="text" 
+                    minlength="2" 
+                    maxlength="30"
+                    placeholder="Insira um período">
                     <button class="create-btn">Criar</button>
                     <button class="cancel-btn">Cancelar</button>
                 </form>
@@ -153,13 +188,17 @@
                         <th>Remover</th>
                     </tr>
                 </table>
-                <button class="register-btn">Novo Horário</button>
 
+                <button class="register-btn">Novo Horário</button>
 
                 <form data-table="calendario" class="modal">
                     <label>Definir uma data</label>
-                    <input class="create-new-data-input" required type="date" minlength="2" maxlength="30"
-                        placeholder="Insira um horário">
+                    <input 
+                    class="input-form" 
+                    required 
+                    type="date" 
+                    placeholder="Insira um horário"
+                    >
                     <button class="create-btn">Criar</button>
                     <button class="cancel-btn">Cancelar</button>
                 </form>
@@ -167,5 +206,4 @@
         </div>
     </main>
 </body>
-
 </html>
