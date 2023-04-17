@@ -9,11 +9,7 @@ th,
 td { 
     text-align: center;
     padding: 1rem;
-    border: .2rem solid var(--global-background);
-}
-
-tr:nth-child(even){
-    border:none;
+    border: .1rem solid var(--global-background);
 }
 
 .fa-pen{

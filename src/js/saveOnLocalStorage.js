@@ -1,4 +1,3 @@
-
 export function saveOnLocalStorage(key, value) {
     let entities = JSON.parse(localStorage.getItem(key))
     if (entities === null) {

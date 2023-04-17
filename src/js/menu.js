@@ -2,7 +2,7 @@ import { removeModal } from "./modal.js"
 const buttons = document.querySelectorAll('.btn')
 const panels = document.querySelectorAll('.panel')
 const menuMobileBtn = document.querySelector('.menu-mobile-btn')
-const menuMobile = document.querySelector('.menu-mobile')
+const menuMobile = document.querySelector('.menu-mobile-container')
 
 
 
