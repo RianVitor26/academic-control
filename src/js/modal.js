@@ -1,42 +1,30 @@
-export const registerButtons = document.querySelectorAll('.register-btn')
-export const modals = document.querySelectorAll('.modal')
-const cancelButtons = document.querySelectorAll('.cancel-btn')
+const modal = document.querySelector('.modal')
+const btnModal = document.querySelector('.register-btn')
+const overlap = document.querySelector('.overlap')
+const input = document.querySelector(`input[data-table="professor"]`)
 
 
-/* 
-  Função para alternar a classe open no modal ao clicar em registrar ou novo 
-  Modal com classe 'open' = display block, sem a classe open = display none.
-*/
-
-export function activeToggleModal() {
-    Array.from(registerButtons).forEach(button => {
-        button.addEventListener('click', () => {
-            Array.from(modals).forEach(modal => {
-                modal.classList.toggle('open')
-            })
-        })
+export function toggleModal() {
+    btnModal.addEventListener('mouseenter', () => {
+        modal.classList.toggle('open')
+        overlap.classList.toggle('active')
+        toggleInfoButton()
+        input.focus()
     })
-
 }
-
-
-// Função para remover os modais que estão abertos ao trocar de menu entidade
 
 export function removeModal() {
-    Array.from(modals).forEach(modal => {
-        modal.classList.remove('open')
-    })
+    modal.classList.remove('open')
+    overlap.classList.remove('active')
 }
 
+export function toggleInfoButton() {
+    const warningColor = 'rgb(206, 74, 74)'
+    const okColor = 'rgb(0, 179, 126)'
+    const colorButton = btnModal.style.backgroundColor == warningColor ? okColor : warningColor
 
-// Função para remover o modal ao clicar no botão cancelar
+    const textButton = btnModal.innerHTML == 'Registrar' ? 'Cancelar' : 'Registrar'
 
-export function cancelModal() {
-    Array.from(cancelButtons).forEach(cancelButton => {
-        cancelButton.addEventListener('click', () => {
-            Array.from(modals).forEach(modal => {
-                modal.classList.remove('open')
-            })
-        }
-    )})
+    btnModal.style.backgroundColor = colorButton
+    btnModal.innerHTML = textButton
 }
