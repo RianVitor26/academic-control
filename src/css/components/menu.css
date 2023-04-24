@@ -62,14 +62,13 @@
     height: 100%;
     text-align: center;
     border-radius: 1rem;
-    padding: 10rem 0;
+    padding: 5rem 0;
     display: none;
-    overflow-y: auto;
-    position: relative;
 }
 
 .panel.active {
     display: block;
+    overflow: auto;
 }
 
 .register-btn {
@@ -79,16 +78,12 @@
     border: none;
     border-radius: 1rem;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    border: .1rem solid var(--add-color);
-    background: none;
-    transition: var(--default-transition);
-}
-
-.register-btn:hover {
+    top: 5rem;
+    right: 5rem;
     background: var(--add-color);
     color: var(--dark-txt);
+    transition: var(--default-transition);
+    z-index: 1001;
 }
 
 
@@ -116,6 +111,14 @@
     background: var(--menu-active);
 }
 
+.btn[data-js="menu7"].active {
+    background: var(--menu-active);
+}
+
+.btn[data-js="menu8"].active {
+    background: var(--menu-active);
+}
+
 
 .panel[data-js="menu1"] {
     background-color: var(--menu-active);
@@ -138,5 +141,13 @@
 }
 
 .panel[data-js="menu6"] {
+    background-color: var(--menu-active);
+}
+
+.panel[data-js="menu7"] {
+    background-color: var(--menu-active);
+}
+
+.panel[data-js="menu8"] {
     background-color: var(--menu-active);
 }

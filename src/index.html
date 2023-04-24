@@ -22,188 +22,140 @@
     <i class="fa-solid fa-bars menu-mobile-btn"></i>
     <main class="wrapper">
         <div class="menu-mobile-container">
-            <button class="btn active" data-js="menu1">Cadastrar Professores</button>
-            <button class="btn" data-js="menu2">Cadastrar Cursos</button>
-            <button class="btn" data-js="menu3">Cadastrar Salas</button>
-            <button class="btn" data-js="menu4">Cadastrar Período</button>
-            <button class="btn" data-js="menu5">Novo Desafio</button>
-            <button class="btn" data-js="menu6">Novo horário</button>
+            <button class="btn active" data-js="menu1">Geral</button>
+            <button class="btn" data-js="menu2">Calendário</button>
+            <button class="btn" data-js="menu3">Professores</button>
+            <button class="btn" data-js="menu4">Cursos</button>
+            <button class="btn" data-js="menu5">Salas</button>
+            <button class="btn" data-js="menu6">Períodos</button>
+            <button class="btn" data-js="menu7">Desafios</button>
+            <button class="btn" data-js="menu8">Horários</button>
         </div>
 
         <div class="menu-btn-container">
-            <button class="btn active" data-js="menu1">Cadastrar Professores</button>
-            <button class="btn" data-js="menu2">Cadastrar Cursos</button>
-            <button class="btn" data-js="menu3">Cadastrar Salas</button>
-            <button class="btn" data-js="menu4">Cadastrar Período</button>
-            <button class="btn" data-js="menu5">Novo Desafio</button>
-            <button class="btn" data-js="menu6">Novo horário</button>
+        <button class="btn active" data-js="menu1">Geral</button>
+        <button class="btn" data-js="menu2">Calendário</button>
+        <button class="btn" data-js="menu3">Professores</button>
+        <button class="btn" data-js="menu4">Cursos</button>
+        <button class="btn" data-js="menu5">Salas</button>
+        <button class="btn" data-js="menu6">Períodos</button>
+        <button class="btn" data-js="menu7">Desafios</button>
+        <button class="btn" data-js="menu8">Horários</button>
         </div>
 
         <div class="panel-container">
-            <div class="panel active" data-js="menu1">
-                <table id="professores">
-                    <tr>
-                        <th>Professores</th>
-                        <th>Editar</th>
-                        <th>Remover</th>
-                    </tr>
-                </table>
+                <div class="panel active" data-js="menu1">
+                    <table id="general">
+                        <tr>
+                            <th>ID</th>
+                            <th>Professor</th>
+                            <th>Curso</th>
+                            <th>Sala</th>
+                            <th>Período</th>
+                            <th>Desafio</th>
+                            <th>Horário</th> 
+                            <th></th>
+                        </tr>
+                    </table>
+                
+                    <button class="register-btn">Registrar</button>
+                
+                    <form id="form" class="modal">
+                        <label>Nome do(a) Professor(a)</label>
+                        <input data-table="professor" id="professor-input" class="input-form" required type="text" minlength="2" maxlength="20"
+                            placeholder="Insira um(a) professor(a)">
 
-                <button class="register-btn">Registrar Professores</button>
+                        <label>Curso</label>
+                        <input data-table="course" id="course-input" class="input-form" required type="text" minlength="2" maxlength="20"
+                            placeholder="Insira o curso do(a) professor(a)">
 
-                <form data-table="professores" class="modal">
-                    <label>Nome do(a) Professor(a)</label>
-                    <input 
-                    class="input-form" 
-                    required 
-                    type="text" 
-                    minlength="2" 
-                    maxlength="30"
-                    placeholder="Insira um(a) professor(a)"
-                    >
-                    <button class="create-btn">Criar</button>
-                    <button class="cancel-btn">Cancelar</button>
-                </form>
-            </div>
+                        <label>Sala de aula</label>
+                        <input data-table="room" id="room-input" class="input-form" required type="text" minlength="2" maxlength="4"
+                            placeholder="Insira a sala que haverá aula">
+
+                        <label>Para qual período</label>
+                        <input data-table="period" id="period-input" class="input-form" required type="text" minlength="2" maxlength="3"
+                            placeholder="Insira o período da aula">
+
+                        <label>Desafio da turma</label>
+                        <input data-table="challenge" id="challenge-input" class="input-form" required type="text" minlength="2" maxlength="30"
+                            placeholder="Insira o desafio da turma">
+
+                        <label>Horário da aula</label>
+                        <input data-table="hour" id="hour-input" class="input-form" required type="text" minlength="2" maxlength="20"
+                            placeholder="Insira o horário da aula">
+
+                        <button class="create-btn">Criar</button>
+                    </form>
+                </div>
 
 
-
+                <div class="overlap"></div>
 
 
             <div class="panel" data-js="menu2">
-                <table id="cursos">
+                <table id="calendario">
                     <tr>
-                        <th>Cursos</th>
-                        <th>Editar</th>
-                        <th>Remover</th>
+                        <th>Segunda</th>
+                        <th>Terça</th>
+                        <th>Quarta</th>
+                        <th>Quinta</th>
+                        <th>Sexta</th>
                     </tr>
                 </table>
-
-                <button class="register-btn">Registrar Cursos</button>
-
-                <form data-table="cursos" class="modal">
-                    <label>Nome do Curso</label>
-                    <input 
-                    class="input-form" 
-                    required 
-                    type="text" 
-                    minlength="2" 
-                    maxlength="30"
-                    placeholder="Insira um novo curso"
-                    >
-                    <button class="create-btn">Criar</button>
-                    <button class="cancel-btn">Cancelar</button>
-                </form>
             </div>
-
-
-
-
 
             <div class="panel" data-js="menu3">
-                <table id="salas">
+                <table id="professor">
                     <tr>
-                        <th>Salas</th>
-                        <th>Editar</th>
-                        <th>Remover</th>
+                        <th>Professores</th>
                     </tr>
                 </table>
-
-                <button class="register-btn">Registrar Salas</button>
-
-                <form data-table="salas" class="modal">
-                    <label>Número da Sala</label>
-                    <input 
-                    class="input-form" 
-                    required type="number" 
-                    min="1" 
-                    max="500"
-                    placeholder="Insira uma sala">
-                    <button class="create-btn">Criar</button>
-                    <button class="cancel-btn">Cancelar</button>
-                </form>
             </div>
-
-
-
-
 
             <div class="panel" data-js="menu4">
-                <table id="periodos">
+                <table id="course">
                     <tr>
-                        <th>Períodos</th>
-                        <th>Editar</th>
-                        <th>Remover</th>
+                        <th>Cursos</th>
                     </tr>
-                </table>
-
-                <button class="register-btn">Registrar Período</button>
-
-                <form data-table="periodos" class="modal">
-                    <label>Período</label>
-                    <input 
-                    class="input-form" 
-                    required 
-                    type="number" 
-                    min="1" 
-                    max="10"
-                    placeholder="Insira o período">
-                    <button class="create-btn">Criar</button>
-                    <button class="cancel-btn">Cancelar</button>
-                </form>
+                </table>    
             </div>
 
-
-
             <div class="panel" data-js="menu5">
-                <table id="desafios">
+                <table id="room">
                     <tr>
-                        <th>Desafios</th>
-                        <th>Editar</th>
-                        <th>Remover</th>
+                        <th>Salas</th>
                     </tr>
                 </table>
-
-                <button class="register-btn">Novo Desafio</button>
-
-                <form data-table="desafios" class="modal">
-                    <label>Nome do desafio</label>
-                    <input 
-                    class="input-form" 
-                    required 
-                    type="text" 
-                    minlength="2" 
-                    maxlength="30"
-                    placeholder="Insira um desafio">
-                    <button class="create-btn">Criar</button>
-                    <button class="cancel-btn">Cancelar</button>
-                </form>
             </div>
 
             <div class="panel" data-js="menu6">
-                <table id="calendario">
+                <table id="period">
                     <tr>
-                        <th>Calendário</th>
-                        <th>Editar</th>
-                        <th>Remover</th>
+                        <th>Períodos</th>
                     </tr>
                 </table>
+            </div>
 
-                <button class="register-btn">Novo Horário</button>
 
-                <form data-table="calendario" class="modal">
-                    <label>Definir uma data</label>
-                    <input 
-                    class="input-form" 
-                    required 
-                    type="date" 
-                    placeholder="Insira um horário"
-                    >
-                    <button class="create-btn">Criar</button>
-                    <button class="cancel-btn">Cancelar</button>
-                </form>
+            <div class="panel" data-js="menu7">
+                <table id="challenge">  
+                    <tr>
+                        <th>Desafios</th>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="panel" data-js="menu8">
+                <table id="hour">
+                    <tr>
+                        <th>Horários</th>
+                    </tr>
+                </table>
             </div>
         </div>
     </main>
 </body>
 </html>
+

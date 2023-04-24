@@ -1,30 +1,71 @@
-import { createNewLineOnTable } from "./createNewLineOnTable.js"
-import { saveOnLocalStorage } from './saveOnLocalStorage.js'
-import { removeModal } from './modal.js'
+import { createNewLineGeneralTable, createEntityList } from "./createLineTables.js"
+import { saveOnLocalStorage } from "./saveOnLocalStorage.js"
+import { removeModal } from "./modal.js"
+import { toggleInfoButton } from './modal.js'
 
-export const forms = document.querySelectorAll('form')
-const inputForms = document.querySelectorAll('.input-form')
-
-// Função para lidar com o 'submit' dos  formuláriios
-// 'Array.from()' transforma uma lista de elementos HTML para uma Array, possibilitando o uso de métodos de Array
-// 'data.set.table' pega o valor de todos os data-set com o sufixo table pra fazer referência ao ID da tabela ao inserir uma nova linha
-
+const form = document.querySelector('#form')
+export const generalTable = document.querySelector('#general')
+const professorInput = document.querySelector('#professor-input')
+const courseInput = document.querySelector('#course-input')
+const roomInput = document.querySelector('#room-input')
+const challengeInput = document.querySelector('#challenge-input')
+const periodInput = document.querySelector('#period-input')
+const hourInput = document.querySelector('#hour-input')
+export const inputs = document.querySelectorAll('input')
+let id = 0 
+    
 export function handleSubmitForm() {
-    Array.from(forms).forEach(form => {
-        form.addEventListener('submit', (event) => {
-            event.preventDefault()
-            const tableID = form.dataset.table
-            Array.from(inputForms).forEach(input => {
-                if (input.value.trim().length > 0) {
-                    const value = input.value
-                    createNewLineOnTable(tableID, value)
-                    saveOnLocalStorage(tableID, value)
-                    input.value = ''
-                }
-            })
+    form.addEventListener('submit', (event) => {
+        event.preventDefault()
+        const professor = professorInput.value
+        const course = courseInput.value
+        const room = roomInput.value
+        const challenge = challengeInput.value
+        const period = periodInput.value
+        const hour = hourInput.value
 
-            removeModal()
-        })
+        if (!verifyInputs()) return
+
+        let obj = {
+            id: generateID(),
+            professor: professor,
+            course: course,
+            room: room,
+            challenge: challenge,
+            period: period,
+            hour: hour
+        }
+        createNewLineGeneralTable(generalTable, obj)
+        saveOnLocalStorage('general', obj)
+
+        Array.from(inputs).forEach(input => {
+            createEntityList(input.dataset.table, input.value)
+            saveOnLocalStorage(input.dataset.table, input.value)
+        })  
+
+        clearInputs()
+        removeModal()
+        toggleInfoButton()
     })
+}
 
+
+function clearInputs() {
+    inputs.forEach(input => input.value = '')
+}
+
+function verifyInputs() {
+    let valid = true
+    inputs.forEach(input => {
+        if (input.value.trim().length === 0) {
+            valid = false
+        }
+    })
+    return valid
+}
+
+
+function generateID() {
+    id++
+    return id
 }

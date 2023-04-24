@@ -1,14 +1,13 @@
 .modal {
     display: none;
     width: 40rem;
-    height: 30rem;
     border-radius: 1rem;
     background-color: var(--global-background);
+    filter: drop-shadow(0 0 1rem rgb(30, 35, 41));
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    filter: drop-shadow(0 0 1rem rgb(30, 35, 41));
 }
 
 .modal label {
@@ -17,7 +16,7 @@
 }
 
 .modal input {
-    padding: .7rem;
+    padding: 1rem;
     border-radius: .5rem;
     margin: .5rem 0;
     border: none;
@@ -41,5 +40,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 2rem;
+    padding: 2rem 5rem;
+    z-index: 1001;
+}
+
+.overlap.active{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.445);
 }
