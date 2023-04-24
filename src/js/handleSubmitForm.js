@@ -27,7 +27,7 @@ export function handleSubmitForm() {
         if (!verifyInputs()) return
 
         let obj = {
-            id: generateID(),
+            id: Date.now(),
             professor: professor,
             course: course,
             room: room,
