@@ -1,11 +1,11 @@
 :root {
-    --global-background: #22272e;
-    --disabled-color: #22272e;
+    --global-background: #121214;
+    --disabled-color: #18181b;
     --add-color: #00b37e;
     --warning-color: #ce4a4a;
     --light-txt: rgb(214, 214, 214);
     --dark-txt: #29292e;
-    --menu-active: #2c3138;
+    --menu-active: #1a1a1d;
     --default-transition: all ease .5s;
 }
 
@@ -23,7 +23,7 @@ body {
     font-size: 62.5%;
     width: 100vw;
     height: 100vh;
-    position: relative;
+    position: relative;;
 }
 
 body {
@@ -36,7 +36,6 @@ main {
     display: flex;
     flex-direction: column;
     position: relative;
-    filter: drop-shadow(0 0 2rem rgb(30, 35, 41));
 }
 
 button {

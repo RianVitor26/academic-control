@@ -24,24 +24,24 @@ export function createNewLineGeneralTable(tableID, obj) {
     })
 
 
-    const cells = newLine.querySelectorAll('td input');
+    const cells = newLine.querySelectorAll('td input')
     cells.forEach(input => {
         input.addEventListener('blur', () => {
-            const id = parseInt(newLine.getAttribute('data-id'));
-            const list = JSON.parse(localStorage.getItem('general')) || [];
-            const index = list.findIndex(item => item.id === id);
+            const id = parseInt(newLine.getAttribute('data-id'))
+            const list = JSON.parse(localStorage.getItem('general')) || []
+            const index = list.findIndex(item => item.id === id)
             if (index !== -1) {
-                list[index].professor = cells[0].value;
-                list[index].course = cells[1].value;
-                list[index].room = cells[2].value;
-                list[index].period = cells[3].value;
-                list[index].challenge = cells[4].value;
-                list[index].hour = cells[5].value;
-                localStorage.setItem('general', JSON.stringify(list));
+                list[index].professor = cells[0].value
+                list[index].course = cells[1].value
+                list[index].room = cells[2].value
+                list[index].period = cells[3].value
+                list[index].challenge = cells[4].value
+                list[index].hour = cells[5].value
+                localStorage.setItem('general', JSON.stringify(list))
             }
-            input.disabled = true;
-        });
-    });
+            
+        })
+    })
 
 
 
