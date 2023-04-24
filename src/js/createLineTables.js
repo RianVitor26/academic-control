@@ -54,10 +54,13 @@ export function createEntityList(tableID, entity) {
     const table = document.getElementById(`${tableID}`)
 
     const cell1 = document.createElement('td')
-    cell1.innerText = entity
+    cell1.innerText = entity.id
+    
+    const cell2 = document.createElement('td')
+    cell2.innerText = entity.value
 
     const newLine = document.createElement('tr')
-    newLine.append(cell1)
+    newLine.append(cell1, cell2)
 
     table.appendChild(newLine)
 }

@@ -12,7 +12,6 @@ const challengeInput = document.querySelector('#challenge-input')
 const periodInput = document.querySelector('#period-input')
 const hourInput = document.querySelector('#hour-input')
 export const inputs = document.querySelectorAll('input')
-let id = 0 
     
 export function handleSubmitForm() {
     form.addEventListener('submit', (event) => {
@@ -26,7 +25,7 @@ export function handleSubmitForm() {
 
         if (!verifyInputs()) return
 
-        let obj = {
+        let objGeneral = {
             id: Date.now(),
             professor: professor,
             course: course,
@@ -35,12 +34,18 @@ export function handleSubmitForm() {
             period: period,
             hour: hour
         }
-        createNewLineGeneralTable(generalTable, obj)
-        saveOnLocalStorage('general', obj)
+        createNewLineGeneralTable(generalTable, objGeneral)
+        saveOnLocalStorage('general', objGeneral)
 
+
+       
         Array.from(inputs).forEach(input => {
-            createEntityList(input.dataset.table, input.value)
-            saveOnLocalStorage(input.dataset.table, input.value)
+            const entity = {
+                id: objGeneral.id,
+                value: input.value
+            }
+            createEntityList(input.dataset.table, entity)
+            saveOnLocalStorage(input.dataset.table, entity)
         })  
 
         clearInputs()
@@ -62,10 +67,4 @@ function verifyInputs() {
         }
     })
     return valid
-}
-
-
-function generateID() {
-    id++
-    return id
 }
