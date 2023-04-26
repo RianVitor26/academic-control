@@ -1,15 +1,12 @@
-const modal = document.querySelector('.modal')
+export const modal = document.querySelector('.modal')
 const btnModal = document.querySelector('.register-btn')
-const overlap = document.querySelector('.overlap')
-const input = document.querySelector(`input[data-table="professor"]`)
-
+export const overlap = document.querySelector('.overlap')
 
 export function toggleModal() {
     btnModal.addEventListener('mouseenter', () => {
         modal.classList.toggle('open')
         overlap.classList.toggle('active')
         toggleInfoButton()
-        input.focus()
     })
 }
 
