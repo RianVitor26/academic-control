@@ -14,7 +14,8 @@
     font-size: 1.5rem;
 }
 
-.modal input, select {
+.modal input,
+select {
     padding: .4rem;
     border-radius: .5rem;
     margin: .4rem 0;
@@ -24,14 +25,15 @@
     outline: none;
 }
 
-.modal .create-btn, .modal .cancel-btn {
+.modal .create-btn,
+.modal .cancel-btn {
     padding: .5rem;
     color: var(--dark-txt);
     background: var(--add-color);
     margin-top: 1rem;
 }
 
-.modal .cancel-btn{
+.modal .cancel-btn {
     background: var(--warning-color);
 }
 
@@ -43,7 +45,7 @@
     z-index: 1001;
 }
 
-.overlap.active{
+.overlap.active {
     width: 100%;
     height: 100vh;
     position: absolute;

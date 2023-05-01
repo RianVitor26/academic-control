@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/components/table.css">
     <link rel="stylesheet" href="css/components/menu.css">
     <link rel="stylesheet" href="css/components/modal.css">
+    <link rel="stylesheet" href="css/components/calendar.css">
     <link rel="stylesheet" href="css/responsiviness.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css'>
     <title>Controle de ensalamento de professores</title>
@@ -19,7 +20,17 @@
 </head>
 
 <body>
+    <div class="theme-container">
+        <input class="btn-theme" type="checkbox" id="checkbox">
+        <label class="label" for="checkbox">
+            <i class="fa-solid fa-sun"></i>
+            <i class="fa-solid fa-moon"></i>
+            <div class="ball"></div>
+        </label>
+    </div>
+    
     <i class="fa-solid fa-bars menu-mobile-btn"></i>
+
     <main class="wrapper">
         <div class="menu-mobile-container">
             <button class="btn active" data-js="menu1">Geral</button>
@@ -29,150 +40,218 @@
             <button class="btn" data-js="menu5">Salas</button>
             <button class="btn" data-js="menu6">Períodos</button>
         </div>
-        
+
         <div class="menu-btn-container">
-        <button class="btn active" data-js="menu1">Geral</button>
-        <button class="btn" data-js="menu2">Calendário</button>
-        <button class="btn" data-js="menu3">Professores</button>
-        <button class="btn" data-js="menu4">Cursos</button>
-        <button class="btn" data-js="menu5">Salas</button>
-        <button class="btn" data-js="menu6">Períodos</button>
+            <button class="btn active" data-js="menu1">Geral</button>
+            <button class="btn" data-js="menu2">Calendário</button>
+            <button class="btn" data-js="menu3">Professores</button>
+            <button class="btn" data-js="menu4">Cursos</button>
+            <button class="btn" data-js="menu5">Salas</button>
+            <button class="btn" data-js="menu6">Períodos</button>
         </div>
 
         <div class="panel-container">
-                <div class="panel active" data-js="menu1">
-                    <table id="general">
-                        <tr>
-                            <th>ID</th>
-                            <th>Professor</th>
-                            <th>Curso</th>
-                            <th>Sala</th>
-                            <th>Período</th>
-                            <th>Desafio</th>
-                            <th>Data</th> 
-                            <th>Início</th> 
-                            <th>Término</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </table>
-                
-                    <button class="register-btn">Registrar</button>
-                
-                    <form id="form" class="modal">
-                        <label>Professor</label>
-                        <select data-table="professor" required id="select-professor">
-                            <option value="James">James</option>
-                            <option value="Rômulo">Rômulo</option>
-                            <option value="Japa">Japa</option>
-                        </select>
-                        
-                        <label>Curso</label>
-                        <select data-table="course" required id="select-course">
-                            <option value="Eng. Software">Eng. Software</option>
-                            <option value="S. de informação">S. de informação</option>
-                            <option value="A.D.S">A.D.S</option>
-                        </select>
-                        
-                        <label>Sala</label>
-                        <select data-table="room" required id="select-room">
-                            <option value="324">324</option>
-                            <option value="Lab 4">Lab 4</option>
-                        </select>
-                        
-                        <label>Período</label>
-                        <select data-table="period" required id="select-period">
-                           <option value="1º Período">1º Período</option>
-                           <option value="2º Período">2º Período</option>
-                           <option value="3º Período">3º Período</option>
-                           <option value="4º Período">4º Período</option>
-                           <option value="5º Período">5º Período</option>
-                           <option value="6º Período">6º Período</option>
-                           <option value="7º Período">7º Período</option>
-                           <option value="8º Período">8º Período</option>
-                           <option value="9º Período">9º Período</option>
-                           <option value="10º Período">10º Período</option>
-                        </select>
-                        
-                        <label>Desafio</label>
-                        <input placeholder="Qual o desafio para a sala?" required id="input-challenge" type="text" maxlength="30" minlength="2">
-                        
-                        <label>Data</label>
-                        <input required type="date" id="input-date">
-
-                        <label>Início</label>
-                        <input required type="time" id="input-init-hour">
-
-                        <label>Término</label>
-                        <input required type="time" id="input-finish-hour">
-
-                        <button class="create-btn">Criar</button>
-                    </form>
-                </div>
-
-
-                <div class="overlap"></div>
-
-
-            <div class="panel" data-js="menu2">
-                <table id="calendario">
+            <div class="panel active" data-js="menu1">
+                <table id="general">
                     <tr>
-                        <th>Segunda</th>
-                        <th>Terça</th>
-                        <th>Quarta</th>
-                        <th>Quinta</th>
-                        <th>Sexta</th>
+                        <th>ID</th>
+                        <th>Professor</th>
+                        <th>Curso</th>
+                        <th>Sala</th>
+                        <th>Período</th>
+                        <th>Desafio</th>
+                        <th>Data</th>
+                        <th>Início</th>
+                        <th>Término</th>
+                        <th></th>
+                        <th></th>
                     </tr>
+                </table>
+
+                <button class="register-btn">Registrar</button>
+
+                <form id="form" class="modal">
+                    <label>Professor</label>
+                    <select data-table="professor" required id="select-professor">
+                        <option value="James">James</option>
+                        <option value="Rômulo">Rômulo</option>
+                        <option value="Japa">Japa</option>
+                    </select>
+
+                    <label>Curso</label>
+                    <select data-table="course" required id="select-course">
+                        <option value="Eng. Software">Eng. Software</option>
+                        <option value="S. de informação">S. de informação</option>
+                        <option value="A.D.S">A.D.S</option>
+                    </select>
+
+                    <label>Sala</label>
+                    <select data-table="room" required id="select-room">
+                        <option value="324">324</option>
+                        <option value="Lab 4">Lab 4</option>
+                    </select>
+
+                    <label>Período</label>
+                    <select data-table="period" required id="select-period">
+                        <option value="1º Período">1º Período</option>
+                        <option value="2º Período">2º Período</option>
+                        <option value="3º Período">3º Período</option>
+                        <option value="4º Período">4º Período</option>
+                        <option value="5º Período">5º Período</option>
+                        <option value="6º Período">6º Período</option>
+                        <option value="7º Período">7º Período</option>
+                        <option value="8º Período">8º Período</option>
+                        <option value="9º Período">9º Período</option>
+                        <option value="10º Período">10º Período</option>
+                    </select>
+
+                    <label>Desafio</label>
+                    <input placeholder="Qual o desafio para a sala?" required id="input-challenge" type="text"
+                        maxlength="30" minlength="2">
+
+                    <label>Data</label>
+                    <input required type="date" id="input-date">
+
+                    <label>Início</label>
+                    <input required type="time" id="input-init-hour">
+
+                    <label>Término</label>
+                    <input required type="time" id="input-finish-hour">
+
+                    <button class="create-btn">Criar</button>
+                </form>
+            </div>
+
+
+            <div class="overlap"></div>
+
+
+            <div class="panel calendario" data-js="menu2">
+                <h3 id="current-year">Ano atual</h3>
+                <header>
+                    <a class="btn-ant"><i class="fa-solid fa-circle-arrow-left"></i></a>
+                    <h3 id="current-month">Mês atual</h3>
+                    <a  class="btn-prox"><i class="fa-solid fa-circle-arrow-right"></i></a>
+                </header>
+                <table id="calendario">
+                   <thead>
+                    <tr>
+                        <th>D</th>
+                        <th>S</th>
+                        <th>T</th>
+                        <th>Q</th>
+                        <th>Q</th>
+                        <th>S</th>
+                        <th>S</th>
+                    </tr>
+                   </thead>
+                   <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                   </tbody>
                 </table>
             </div>
 
-            <div class="panel" data-js="menu3">
+            <div class="panel professor" data-js="menu3">
                 <table id="professor">
                     <tr>
                         <th>ID</th>
                         <th>Professores</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </table>
+
             </div>
 
-            <div class="panel" data-js="menu4">
+            <div class="panel course" data-js="menu4">
                 <table id="course">
                     <tr>
                         <th>ID</th>
                         <th>Cursos</th>
+                        <th></th>
+                        <th></th>
                     </tr>
-                </table>    
+                </table>
+
             </div>
 
-            <div class="panel" data-js="menu5">
+            <div class="panel room" data-js="menu5">
                 <table id="room">
                     <tr>
                         <th>ID</th>
                         <th>Salas</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </table>
+
             </div>
 
-            <div class="panel" data-js="menu6">
+            <div class="panel period" data-js="menu6">
                 <table id="period">
                     <tr>
                         <th>ID</th>
                         <th>Períodos</th>
-                    </tr>
-                </table>
-            </div>
-
-
-            <div class="panel" data-js="menu7">
-                <table id="challenge">  
-                    <tr>
-                        <th>ID</th>
-                        <th>Desafios</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </table>
             </div>
         </div>
     </main>
 </body>
-</html>
 
+</html>
